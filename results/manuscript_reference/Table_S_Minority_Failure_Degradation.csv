@@ -1,0 +1,25 @@
+canonical_dataset,algorithm,state,class_block_count,support_qualified_dynamic_minority_attack_class_blocks,fraction,support_threshold,minority_definition,scope
+NF-CSE-CIC-IDS2018-v3,HT,complete_failure,20,81,0.24691358024691357,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-CSE-CIC-IDS2018-v3,HT,recall_ge_0.5,5,81,0.06172839506172839,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-CSE-CIC-IDS2018-v3,HT,severe_degradation_0_to_0.2,56,81,0.691358024691358,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-CSE-CIC-IDS2018-v3,MOOB,complete_failure,8,81,0.09876543209876543,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-CSE-CIC-IDS2018-v3,MOOB,degradation_0.2_to_0.5,7,81,0.08641975308641975,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-CSE-CIC-IDS2018-v3,MOOB,recall_ge_0.5,12,81,0.14814814814814814,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-CSE-CIC-IDS2018-v3,MOOB,severe_degradation_0_to_0.2,54,81,0.6666666666666666,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-CSE-CIC-IDS2018-v3,MUOB,complete_failure,81,81,1.0,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-CSE-CIC-IDS2018-v3,OB,complete_failure,39,81,0.48148148148148145,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-CSE-CIC-IDS2018-v3,OB,recall_ge_0.5,6,81,0.07407407407407407,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-CSE-CIC-IDS2018-v3,OB,severe_degradation_0_to_0.2,36,81,0.4444444444444444,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,HT,complete_failure,24,115,0.20869565217391303,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,HT,degradation_0.2_to_0.5,20,115,0.17391304347826086,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,HT,recall_ge_0.5,11,115,0.09565217391304348,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,HT,severe_degradation_0_to_0.2,60,115,0.5217391304347826,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,MOOB,complete_failure,2,115,0.017391304347826087,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,MOOB,degradation_0.2_to_0.5,27,115,0.23478260869565218,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,MOOB,recall_ge_0.5,75,115,0.6521739130434783,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,MOOB,severe_degradation_0_to_0.2,11,115,0.09565217391304348,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,MUOB,complete_failure,115,115,1.0,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,OB,complete_failure,29,115,0.25217391304347825,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,OB,degradation_0.2_to_0.5,22,115,0.19130434782608696,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,OB,recall_ge_0.5,9,115,0.0782608695652174,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks
+NF-ToN-IoT-v3,OB,severe_degradation_0_to_0.2,55,115,0.4782608695652174,50,prior < 1/K (primary definition),support-qualified dynamic-minority attack-class blocks

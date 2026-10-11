@@ -1,0 +1,13 @@
+# Portable direct dependencies for the public E1 reproduction package.
+# Exact versions are retained where the frozen environment snapshot provides portable pins.
+# The three unpinned packages below were recorded as local Conda file references in the frozen
+# pip snapshot, so no unsupported exact version is invented here.
+
+numpy==1.26.4
+pandas==2.3.3
+pyarrow==25.0.0
+river==0.21.2
+scipy==1.15.3
+PyYAML
+psutil
+matplotlib

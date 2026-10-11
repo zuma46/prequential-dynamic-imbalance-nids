@@ -1,0 +1,20 @@
+{
+  "policy": "Only machine-specific path defaults/metadata are transformed; scientific logic and parameters are unchanged.",
+  "files": {
+    "chronology/authoritative/e1_repair_cse_temporal_v1_1.py": {
+      "source_sha256": "9abbdb074d46f1814069bdac5ae7482d365e2e3652efc28ae037813ffea454ea",
+      "public_sha256": "7940ea114f23ac60545fecba73eaf985522ece75c4ea7eb9026c1162f33ed64a",
+      "transformation": "absolute path literals made environment-root portable; hostname/path text sanitized only"
+    },
+    "analysis/e1_final_analysis_v1_0.py": {
+      "source_sha256": "be187371ced3864d08763a6c324b32d40b0bca012500925a435a20df3225f5f5",
+      "public_sha256": "6828427c3bae86eaedad09856085a5900c896858133ed5fca5f9365061518579",
+      "transformation": "absolute path literals made environment-root portable; hostname/path text sanitized only"
+    },
+    "analysis/e1_final_analysis_v1_0.yaml": {
+      "source_sha256": "ca9d410151dacc1d796631f07d8629605d18922e0b54e7ca7ea74febeb2e4435",
+      "public_sha256": "e8c4aac5bc680c4f887b3e2241767f363b2db5fd5df67d0c5e1d91c04031055f",
+      "transformation": "machine-specific path values replaced by portable environment placeholders only"
+    }
+  }
+}

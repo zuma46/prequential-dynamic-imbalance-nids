@@ -1,0 +1,35 @@
+{
+  "protocol_id": "E1_TDIM_MSB_FINAL_CORE_v1.0",
+  "datasets": {
+    "NF-CSE-CIC-IDS2018-v3": 20115529,
+    "NF-ToN-IoT-v3": 27520260
+  },
+  "total_flows_once_each_dataset": 47635789,
+  "predictive_features": 49,
+  "algorithms": [
+    "HT",
+    "OB",
+    "MOOB",
+    "MUOB"
+  ],
+  "stochastic_seeds": [
+    123456789,
+    234567891,
+    345678912,
+    456789123,
+    567891234
+  ],
+  "total_jobs": 32,
+  "block_size": 50000,
+  "rolling_windows": [
+    250000,
+    500000,
+    1000000
+  ],
+  "primary_rolling_window": 500000,
+  "checkpoint_every": 1000000,
+  "evaluation": "prequential_test_then_train",
+  "fidelity_engine": "v1.4",
+  "poisson_update": "exact_repeated_updates",
+  "ensemble_decision": "hard_majority_vote"
+}

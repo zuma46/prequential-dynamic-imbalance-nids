@@ -1,0 +1,3 @@
+canonical_dataset,blocks_total,classes_total,mean_active_classes_per_block,min_active_classes_per_block,max_active_classes_per_block,max_local_ir_observed,mean_jsd_adjacent_blocks,max_jsd_adjacent_blocks,disappearance_events,recurrence_events,minority_switch_events
+NF-CSE-CIC-IDS2018-v3,403,15,1.7642679900744418,1,4,49999.0,0.01166891841843151,0.404550880657629,15,1,14
+NF-ToN-IoT-v3,551,10,1.9909255898366607,1,3,49999.0,0.012524980911755917,0.7334306703166056,16,8,30

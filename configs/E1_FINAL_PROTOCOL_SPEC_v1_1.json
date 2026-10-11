@@ -1,0 +1,35 @@
+{
+  "protocol_id": "E1_TDIM_MSB_FINAL_CORE_v1.1",
+  "change_from_v1_0": "NF-CSE temporal integrity correction only; all model/evaluation fidelity settings remain unchanged",
+  "nf_cse": {
+    "source": "NF-CSE-CIC-IDS2018-v3.parquet",
+    "corrected": "NF-CSE-CIC-IDS2018-v3-temporal-corrected.parquet",
+    "rows": 20115529,
+    "known_incident": {
+      "strict_inversions": 1,
+      "inversion_absolute_row_zero_based": 20115069,
+      "previous_timestamp_ms": 1520021065524,
+      "current_timestamp_ms": 1519302310148
+    },
+    "v1_0_checkpoints_reusable": false,
+    "v1_1_rerun_from_row": 0,
+    "jobs": 16
+  },
+  "nf_ton_iot": {
+    "dataset": "NF-ToN-IoT-v3.parquet",
+    "reuse_completed_v1_0_jobs": true,
+    "jobs": 16
+  },
+  "algorithms": ["HT", "OB", "MOOB", "MUOB"],
+  "stochastic_seeds": [123456789, 234567891, 345678912, 456789123, 567891234],
+  "predictive_features": 49,
+  "evaluation": "prequential_test_then_train",
+  "block_size": 50000,
+  "rolling_windows": [250000, 500000, 1000000],
+  "primary_rolling_window": 500000,
+  "checkpoint_every": 1000000,
+  "fidelity_engine": "v1.4",
+  "poisson_update": "exact_repeated_updates",
+  "ensemble_decision": "hard_majority_vote",
+  "combined_final_jobs": 32
+}

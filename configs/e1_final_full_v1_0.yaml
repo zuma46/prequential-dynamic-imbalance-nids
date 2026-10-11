@@ -1,0 +1,72 @@
+experiment:
+  name: E1_TDIM_MSB_SMOKE
+  profile: E1_FINAL_CORE_FULL_STREAM_v1_0
+  seeds:
+  - 123456789
+  - 234567891
+  - 345678912
+  - 456789123
+  - 567891234
+  deterministic_seed: 123456789
+dataset:
+  path: __AUTO__
+  label_column: __AUTO__
+  timestamp_column: __AUTO__
+  class_names: null
+  row_start: 0
+  max_rows: null
+  require_timestamp: true
+  validate_chronology: true
+  chronology_tolerance: 0
+  feature_include: null
+  feature_exclude:
+  - FLOW_END_MILLISECONDS
+  numeric_features_only: true
+  drop_ip_addresses: true
+  drop_identifier_columns: true
+  batch_size: 200000
+  use_threads: false
+  memory_map: true
+  pre_buffer: false
+evaluation:
+  block_size: 50000
+  rolling_windows:
+  - 250000
+  - 500000
+  - 1000000
+  checkpoint_every: 1000000
+  resource_log_every: 50000
+  store_classwise_metrics: true
+  store_confusion_matrices: true
+models:
+  algorithms:
+  - HT
+  - OB
+  - MOOB
+  - MUOB
+  ensemble_size: 5
+  class_size_theta: 0.9
+  class_size_floor: 1.0e-12
+  moob_lambda_cap: null
+  ht:
+    grace_period: 200
+    max_depth: 20
+    split_criterion: info_gain
+    delta: 1.0e-07
+    tau: 0.05
+    leaf_prediction: nba
+    nb_threshold: 0
+    binary_split: false
+    max_size: 64.0
+    memory_estimate_period: 250000
+    stop_mem_management: false
+    remove_poor_attrs: true
+    merit_preprune: true
+runtime:
+  output_root: __AUTO__
+  resume: true
+  overwrite: false
+  fail_on_nonfinite: false
+  prediction_fallback: benign_then_majority
+  gc_every_blocks: 20
+  log_level: INFO

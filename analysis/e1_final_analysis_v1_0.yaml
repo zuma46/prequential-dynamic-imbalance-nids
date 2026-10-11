@@ -1,0 +1,33 @@
+# E1-TDIM-MSB Final Analysis Pipeline v1.0
+project_root: ${E1_PROJECT_ROOT}
+
+analysis_ready: ${E1_PROJECT_ROOT}/outputs/E1_FINAL_CORE_FULL_v1_1/_analysis_ready
+
+output_root: ${E1_PROJECT_ROOT}/outputs/E1_FINAL_ANALYSIS_v1_0
+
+# Locked E1 temporal protocol
+block_size: 50000
+primary_window: 500000
+rolling_windows:
+  - 250000
+  - 500000
+  - 1000000
+
+# Primary temporal statistical inference
+# 20 non-overlapping 50k blocks = 1,000,000 flows per bootstrap block.
+bootstrap_reps: 5000
+bootstrap_block_length: 20
+bootstrap_seed: 20260805
+alpha: 0.05
+
+# Sensitivity/diagnostic outputs. These do not silently redefine the E1 protocol.
+support_thresholds:
+  - 10
+  - 50
+  - 100
+
+recall_collapse_thresholds:
+  - 0.5
+  - 0.2
+
+dpi: 180

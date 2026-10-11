@@ -1,0 +1,61 @@
+{
+  "package_id": "E1_PUBLIC_REPRODUCTION_PACKAGE_v1_0_0",
+  "public_release_version": "1.0.0",
+  "release_date": "2026-10-10",
+  "paper_title": "Prequential Evaluation of Dynamic Class Imbalance and Minority-Class Failure in Network Intrusion Detection",
+  "repository_url": "https://github.com/zuma46/prequential-dynamic-imbalance-nids",
+  "release_mode": "PUBLIC_REPRODUCTION_WITHOUT_DATASETS",
+  "predictive_feature_count": 49,
+  "frozen_seeds": [
+    123456789,
+    234567891,
+    345678912,
+    456789123,
+    567891234
+  ],
+  "datasets": {
+    "NF-CSE-CIC-IDS2018-v3": {
+      "doi": "10.48610/ece9b83",
+      "provider": "University of Queensland",
+      "dataset_not_redistributed": true,
+      "expected_original_sha256": "f1ba65a4e10cf382f63aae28e43eedfe442f63f78ff8bb08609af506cda51cc5",
+      "expected_corrected_sha256": "43d64fa510b8352e7ef5cc1d90a97aff03e9db5b304c070ebaca8601ee78351f"
+    },
+    "NF-ToN-IoT-v3": {
+      "doi": "10.48610/44d7c5e",
+      "provider": "University of Queensland",
+      "dataset_not_redistributed": true
+    }
+  },
+  "minimum_environment": {
+    "python": "3.10.10",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "pyarrow": "25.0.0",
+    "river": "0.21.2"
+  },
+  "relationship_analysis": {
+    "bootstrap_reps": 5000,
+    "bootstrap_seed": 20260831,
+    "primary_support_floor": 50,
+    "support_floor_sensitivity": [
+      10,
+      50,
+      100
+    ],
+    "primary_mbb_length_blocks": 20,
+    "mbb_length_sensitivity_blocks": [
+      10,
+      20,
+      40
+    ],
+    "full_blocks": {
+      "NF-CSE-CIC-IDS2018-v3": 402,
+      "NF-ToN-IoT-v3": 550
+    },
+    "required_class_block_sha256": "f920643490e5d5441751c33536f262efd76655ed663b97255a3a6db485ccba67"
+  },
+  "scientific_experiment_frozen": true,
+  "dataset_redistribution_allowed": false,
+  "retuning_allowed": false
+}

@@ -1,0 +1,42 @@
+{
+  "analysis_id": "E1_RQ1_FORMAL_RELATIONSHIP_v1_0",
+  "status": "PREDECLARED_BEFORE_RELATIONSHIP_RESULTS",
+  "scientific_scope": "Read-only secondary analysis of frozen E1 exact 50,000-flow class-block outputs. No learner execution, raw-dataset read, retuning, seed change, feature change, or model-state change.",
+  "authoritative_input_default": "${E1_PROJECT_ROOT}/outputs/E1_FINAL_ANALYSIS_v1_0/01_master/nonoverlap_block_class_metrics_derived.parquet",
+  "unit_of_analysis": "attack-class x exact non-overlapping 50,000-flow block after seed averaging within learner",
+  "seed_aggregation": "Arithmetic mean of class-block recall across the five fixed seeds for OB/MOOB/MUOB; HT uses its single deterministic run. Support uses the invariant maximum within the grouped records.",
+  "primary_support_floor": 50,
+  "support_floor_sensitivity": [10, 50, 100],
+  "primary_dependence_span_blocks": 20,
+  "dependence_span_sensitivity_blocks": [10, 20, 40],
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 20260831,
+  "primary_estimands": [
+    {
+      "name": "within_class_support_recall_slope",
+      "definition": "Class-fixed-effect slope of recall on log10(class support), estimated separately by dataset and learner. The coefficient is absolute recall change associated with a 10-fold within-class increase in support.",
+      "interpretation": "Association only; not causal. Positive slope means recall tends to be higher when the same class has greater support."
+    },
+    {
+      "name": "within_class_minority_state_recall_contrast",
+      "definition": "Class-fixed-effect coefficient for dynamic-minority state (minority minus active non-minority recall), restricted to attack classes observed in both states at the chosen support floor.",
+      "interpretation": "Association only; not causal. Negative contrast means the same switching classes tend to have lower recall while dynamically minority."
+    }
+  ],
+  "primary_inferential_models": ["HT", "OB", "MOOB"],
+  "degenerate_model_policy": "MUOB is reported descriptively. If attack-class recall is constant, no relationship p-value or Holm test is assigned.",
+  "temporal_inference": "Moving-block bootstrap over the full chronological sequence of exact analysis-block indices; all eligible class rows within a sampled temporal block move together. Percentile 95% intervals and centered-null bootstrap p-values are reported.",
+  "multiplicity": {
+    "primary_relationship_family": "Holm within each dataset over 6 tests: 3 inferential learners x 2 primary relationship estimands at support floor 50 and L=20.",
+    "secondary_treatment_contrast_family": "Holm within each dataset over 4 synchronized-bootstrap contrasts: OB-HT and MOOB-HT for each of the two primary relationship estimands at support floor 50 and L=20."
+  },
+  "secondary_treatment_contrasts": ["OB-HT", "MOOB-HT"],
+  "claim_boundaries": [
+    "Do not claim that dynamic imbalance causes recall degradation.",
+    "Do not call prevalence/minority-state changes concept drift.",
+    "Do not treat seeds as independent streams.",
+    "Do not use overlapping rolling windows for this formal relationship inference.",
+    "Do not reinterpret a non-significant association as evidence of no operational vulnerability.",
+    "Do not change the analysis protocol after inspecting the relationship outputs except to correct a demonstrated implementation defect, which must be versioned and documented."
+  ]
+}

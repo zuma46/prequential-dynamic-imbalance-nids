@@ -1,0 +1,16 @@
+dataset,learner_or_contrast,estimand,support_floors,mbb_spans_blocks,sensitivity_interpretation,primary_multiplicity_result
+NF-CSE-CIC-IDS2018-v3,HT,support_slope,10/50/100,10/20/40,Positive in all 9 settings; 95% interval excludes 0 in all 9,Primary Holm p=0.0222
+NF-CSE-CIC-IDS2018-v3,HT,minority_contrast,10/50/100,10/20/40,Negative in all 9 settings; 95% interval excludes 0 in all 9,Primary Holm p=0.0222
+NF-CSE-CIC-IDS2018-v3,OB,support_slope,10/50/100,10/20/40,Positive in all 9 settings; 95% interval excludes 0 in all 9,Primary Holm p=0.0048
+NF-CSE-CIC-IDS2018-v3,OB,minority_contrast,10/50/100,10/20/40,Negative in all 9 settings; 95% interval excludes 0 in all 9,Primary Holm p=0.0168
+NF-CSE-CIC-IDS2018-v3,MOOB,support_slope,10/50/100,10/20/40,Positive in all 9 settings; 95% interval excludes 0 in all 9,Primary Holm p=0.0222
+NF-CSE-CIC-IDS2018-v3,MOOB,minority_contrast,10/50/100,10/20/40,Negative in all 9 settings; 95% interval excludes 0 in all 9,Primary Holm p=0.0110
+NF-ToN-IoT-v3,HT,support_slope,10/50/100,10/20/40,Positive in all 9 settings; 95% interval excludes 0 in all 9,Primary Holm p=0.0012
+NF-ToN-IoT-v3,HT,minority_contrast,10/50/100,10/20/40,Negative in all 9 settings; 95% interval excludes 0 in all 9,Primary Holm p=0.0016
+NF-ToN-IoT-v3,OB,support_slope,10/50/100,10/20/40,Positive in all 9 settings; 95% interval excludes 0 in all 9,Primary Holm p=0.0012
+NF-ToN-IoT-v3,OB,minority_contrast,10/50/100,10/20/40,Negative in all 9 settings; 95% interval excludes 0 in all 9,Primary Holm p=0.0016
+NF-ToN-IoT-v3,MOOB,support_slope,10/50/100,10/20/40,Positive point estimates; interval exclusion is not stable across settings,Primary Holm p=0.1532
+NF-ToN-IoT-v3,MOOB,minority_contrast,10/50/100,10/20/40,Negative point estimates; intervals include 0 across the tested settings,Primary Holm p=0.2754
+NF-ToN-IoT-v3,MOOB-HT,support_slope_difference,10/50/100,10/20/40,Negative in all 9 settings; 95% interval excludes 0 in all 9,Primary Holm p=0.0040
+NF-ToN-IoT-v3,MOOB-HT,minority_contrast_difference,10/50/100,10/20/40,Positive in all 9 settings; 95% interval excludes 0 in all 9,Primary Holm p=0.0054
+NF-ToN-IoT-v3,OB-HT,both coefficient differences,10/50/100,10/20/40,No stable interval exclusion from 0,Primary Holm p=1.0000

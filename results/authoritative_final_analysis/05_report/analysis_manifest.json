@@ -1,0 +1,58 @@
+{
+  "analysis_configuration": {
+    "alpha": 0.05,
+    "block_size": 50000,
+    "bootstrap_block_length_blocks": 20,
+    "bootstrap_reps": 5000,
+    "bootstrap_seed": 20260805,
+    "primary_window": 500000,
+    "recall_collapse_thresholds": [
+      0.5,
+      0.2
+    ],
+    "rolling_windows": [
+      250000,
+      500000,
+      1000000
+    ],
+    "support_thresholds": [
+      10,
+      50,
+      100
+    ]
+  },
+  "counts": {
+    "derived_block_class_rows": 184880,
+    "derived_block_metric_rows": 15264,
+    "figures": 26,
+    "lifecycle_classes": 25,
+    "lifecycle_events": 109,
+    "master_class_metric_rows": 725520,
+    "master_metric_rows": 59936,
+    "pairwise_tests": 72,
+    "runs": 32
+  },
+  "elapsed_seconds": 71.84,
+  "environment": {
+    "hostname": "not-recorded-in-public-release",
+    "matplotlib": "3.7.1",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "python": "3.10.10",
+    "scipy": null
+  },
+  "generated_at_utc": "2026-08-05T15:47:55.811941+00:00",
+  "input_analysis_ready": "${E1_PROJECT_ROOT}/outputs/E1_FINAL_CORE_FULL_v1_1/_analysis_ready",
+  "input_artifact_index_sha256": "c51f2239b7a23a8481b2584a6cf6928acc6759c2491a50155b00dbe0131a063b",
+  "input_final_manifest_sha256": "c0fd8f2d64c4d31cfc939e6ce51d679668ae86fcba2f02ecf1ef60a2d87cd019",
+  "methodology": {
+    "final_cumulative": "aggregate final endpoint across stochastic seeds",
+    "nonoverlap_blocks": "derived exactly from differences of cumulative confusion matrices",
+    "primary_pairwise_test": "paired moving-block bootstrap on full 50k blocks with centered-null bootstrap and Holm adjustment",
+    "rolling": "seed-aggregated trajectories; overlapping windows not treated as independent",
+    "supplementary_test": "Friedman on non-overlap blocks; supplementary only because temporal autocorrelation is not explicitly modeled"
+  },
+  "output_root": "${E1_PROJECT_ROOT}/outputs/E1_FINAL_ANALYSIS_v1_0",
+  "pipeline": "E1_FINAL_ANALYSIS_PIPELINE_v1.0",
+  "status": "COMPLETE"
+}

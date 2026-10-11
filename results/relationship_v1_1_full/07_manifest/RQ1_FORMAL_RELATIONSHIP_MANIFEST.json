@@ -1,0 +1,68 @@
+{
+  "analysis_id": "E1_RQ1_FORMAL_RELATIONSHIP_v1_0",
+  "status": "PASS",
+  "operation": "DERIVED_READ_ONLY_ANALYSIS_OF_FROZEN_CLASS_BLOCK_OUTPUTS",
+  "learner_execution": false,
+  "raw_dataset_read": false,
+  "retuning": false,
+  "model_state_change": false,
+  "implementation_version": "v1_1_FULL_BLOCK_TOPOLOGY_FIX",
+  "input": {
+    "path": "${E1_PROJECT_ROOT}/outputs/E1_FINAL_ANALYSIS_v1_0/01_master/nonoverlap_block_class_metrics_derived.parquet",
+    "sha256": "f920643490e5d5441751c33536f262efd76655ed663b97255a3a6db485ccba67",
+    "rows": 184880
+  },
+  "prepared_rows": 3412,
+  "dataset_full_blocks": {
+    "NF-CSE-CIC-IDS2018-v3": 402,
+    "NF-ToN-IoT-v3": 550
+  },
+  "dataset_attack_observed_blocks": {
+    "NF-CSE-CIC-IDS2018-v3": 243,
+    "NF-ToN-IoT-v3": 537
+  },
+  "bootstrap_reps": 5000,
+  "bootstrap_seed": 20260831,
+  "support_floors": [
+    10,
+    50,
+    100
+  ],
+  "mbb_lengths": [
+    10,
+    20,
+    40
+  ],
+  "primary_support_floor": 50,
+  "primary_mbb_length": 20,
+  "outputs": [
+    {
+      "path": "02_relationship/Table_RQ1_Formal_Relationship_AllSensitivity.csv",
+      "sha256": "207d63f66ffd5a819d5e1ab99e1ff051fa048ac8c5c8824318b29e2c5fb890ab"
+    },
+    {
+      "path": "02_relationship/Table_RQ1_Formal_Relationship_Primary.csv",
+      "sha256": "9499e27bff629d9143dd5b52731e07f3643fe08ed83ebb016e262169afdadac0"
+    },
+    {
+      "path": "03_treatment_contrasts/Table_RQ1_Treatment_Coefficient_Contrasts_AllSensitivity.csv",
+      "sha256": "106362ceed0d3ec4979c8bb034f5b921cef020b0e49920ae22882f6fd9791582"
+    },
+    {
+      "path": "03_treatment_contrasts/Table_RQ1_Treatment_Coefficient_Contrasts_Primary.csv",
+      "sha256": "7c13f11170e70d3491cc645825f79ee9c526e0addec05ecb4221a998781458c2"
+    },
+    {
+      "path": "04_descriptive/Table_RQ1_Minority_State_Recall.csv",
+      "sha256": "f5f7ce61c77aa3016e687bc5f8cdcf066b9c63a3be53950f7317f81b0b84d3a2"
+    },
+    {
+      "path": "04_descriptive/Table_RQ1_Support_Bin_Recall.csv",
+      "sha256": "ac2ae8cbcb187b1b4998d87e2c9286d13a0ffff87774c6fc47c64f1470f392ca"
+    },
+    {
+      "path": "07_manifest/RQ1_FORMAL_RELATIONSHIP_SUMMARY.md",
+      "sha256": "8760ddffc09606d248c0026afd0e783750c8da0f726441d4ee068757c030d38f"
+    }
+  ]
+}

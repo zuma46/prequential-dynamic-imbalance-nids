@@ -1,0 +1,9 @@
+dataset,model,config,n_predictive_features,label_column,timestamp_column,require_timestamp,feature_exclude,numeric_features_only,drop_identifier_columns,config_sha256
+NF-CSE-CIC-IDS2018-v3,HT,configs/source_v1_1/NF-CSE-CIC-IDS2018-v3-temporal-corrected__HT.yaml,49,Attack,FLOW_START_MILLISECONDS,True,FLOW_END_MILLISECONDS,True,True,07929a206e2d434216302855a5fc62ea26e76cb58b45541b81a4580c74ad0e2b
+NF-CSE-CIC-IDS2018-v3,MOOB,configs/source_v1_1/NF-CSE-CIC-IDS2018-v3-temporal-corrected__MOOB.yaml,49,Attack,FLOW_START_MILLISECONDS,True,FLOW_END_MILLISECONDS,True,True,55b7c5aaa21439ebf35b845d36096269e62996df759e97ce421f3090673139d3
+NF-CSE-CIC-IDS2018-v3,MUOB,configs/source_v1_1/NF-CSE-CIC-IDS2018-v3-temporal-corrected__MUOB.yaml,49,Attack,FLOW_START_MILLISECONDS,True,FLOW_END_MILLISECONDS,True,True,b4a16880f2ab5d00679740d4f6eb268a365d960c80de7ca4fc6fa93e5156fbe3
+NF-CSE-CIC-IDS2018-v3,OB,configs/source_v1_1/NF-CSE-CIC-IDS2018-v3-temporal-corrected__OB.yaml,49,Attack,FLOW_START_MILLISECONDS,True,FLOW_END_MILLISECONDS,True,True,e0f1d4b958dc6c9f3416ca3ee3c655ba5d8f68cc09a88df6692ea94f391fbe33
+NF-ToN-IoT-v3,HT,configs/source_v1_0/NF-ToN-IoT-v3__HT.yaml,49,Attack,FLOW_START_MILLISECONDS,True,FLOW_END_MILLISECONDS,True,True,21e31637c509f38c8bf15b96eabc7e7e56f52e4d6cb2b23187e099094ae01915
+NF-ToN-IoT-v3,MOOB,configs/source_v1_0/NF-ToN-IoT-v3__MOOB.yaml,49,Attack,FLOW_START_MILLISECONDS,True,FLOW_END_MILLISECONDS,True,True,88d9a29d19389c2547dea820107213abbfd0ad2960f05a8f814ecbeb9730f140
+NF-ToN-IoT-v3,MUOB,configs/source_v1_0/NF-ToN-IoT-v3__MUOB.yaml,49,Attack,FLOW_START_MILLISECONDS,True,FLOW_END_MILLISECONDS,True,True,c02943ca5a98ebc60182f4798bfa69365f9784165d72aaf3c983930b7d393bf6
+NF-ToN-IoT-v3,OB,configs/source_v1_0/NF-ToN-IoT-v3__OB.yaml,49,Attack,FLOW_START_MILLISECONDS,True,FLOW_END_MILLISECONDS,True,True,468cd82922e8f664a5d164e4220be4d480b375d7e84f9c2ba262aa1d346249ef
