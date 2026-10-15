@@ -97,6 +97,42 @@ Use:
 - `results/relationship_v1_1_reference/`
 - `results/authoritative_final_analysis/`
 
+## Corrected temporal analysis
+
+Run the original analysis pipeline first to generate both
+`nonoverlap_block_metrics_derived.csv` and
+`nonoverlap_block_class_metrics_derived.parquet` in an input directory.
+Then run these commands from the repository root, using a separate output directory:
+
+```bash
+python analysis/temporal/run_analysis.py --input /path/to/derived --out /path/to/corrected
+python analysis/temporal/sensitivity.py --input /path/to/derived --out /path/to/sensitivity
+python analysis/temporal/check_undersampling.py --models src/e1_tdim_msb/models.py --out /path/to/muob_check.json
+```
+
+The parent directory for the diagnostic JSON must already exist.
+The first command uses 5,000 bootstrap replicates, seed 20260805, and spans
+of 10, 20 and 40 blocks. Undefined metric positions remain on the complete
+chronological grid during resampling. Primary Holm families contain 36 tests
+per dataset and span; the global sensitivity family contains 72 tests per
+span. The minority-definition sensitivity family contains 16 contrasts.
+
+For pairwise temporal inference and minority-definition sensitivity, these
+newly generated outputs supersede the corresponding historical CSVs under
+`results/manuscript_reference/` and
+`results/authoritative_final_analysis/04_statistics/`. Do not use historical
+pairwise p-values or intervals as the corrected results. Other frozen
+summaries and the separate within-class relationship analysis retain their
+existing roles. That relationship command uses its own seed, 20260831.
+
+The second command reports per-seed failure, coarser-block summaries and
+class/run influence checks. These checks are descriptive. The third checks
+the actual tracker and Poisson repeat-update mechanism on synthetic input;
+it does not measure detection performance. None of these three commands
+retrains the original learners. Raw datasets and derived input files are
+not redistributed; they must be obtained or regenerated through the existing
+reproduction route.
+
 ## Statistical contract
 
 - Exact primary temporal unit: 50,000 flows.
@@ -126,3 +162,4 @@ The evaluated environment used Python 3.10.10 with NumPy 1.26.4, pandas 2.3.3, P
 
 Code and documentation are distributed under the MIT License.
 Dataset rights remain with the original dataset providers.
+
